@@ -29,7 +29,7 @@ func DefaultPath() string {
 		log.Errorf("user.Current: %v", err)
 	}
 
-	p := path.Join(usr.HomeDir, "Pictures", "GoSiMac")
+	p := path.Join(usr.HomeDir, "Pictures", "Wallpapers")
 	if _, err := os.Stat(p); err != nil {
 		if err := os.Mkdir(p, 0755); err != nil {
 			log.Fatalf("os.Mkdir: %v", err)
@@ -47,13 +47,8 @@ func Run(s core.Source, cmd *cobra.Command) error {
 		return err
 	}
 
-	cmd.Println(color.CyanString(">>> Source"))
-	cmd.Println(color.CyanString("%+v", s))
-	cmd.Println(color.CyanString(">>>"))
-
-	cmd.Println(color.GreenString(">>> Path"))
-	cmd.Println(color.GreenString("%s", p))
-	cmd.Println(color.GreenString(">>>"))
+	cmd.Println(color.CyanString("Source: %+v", s))
+	cmd.Println(color.GreenString("Path: %s", p))
 
 	a := core.NewApp(p, s)
 	if err := a.Run(); err != nil {
