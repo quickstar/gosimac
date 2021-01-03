@@ -1,4 +1,6 @@
-# Go Si Mac
+# wally
+This is a fork of [Go Si Mac](https://github.com/1995parham/gosimac), initially created by [1995parham](https://github.com/1995parham). It extends _Go Si Mac_ with images from [reddit](https://www.reddit.com/r/wallpaper/hot/) and is capable of setting a random background image for you.
+
 [![Drone (cloud)](https://img.shields.io/drone/build/1995parham/gosimac.svg?style=flat-square&logo=drone)](https://cloud.drone.io/1995parham/gosimac)
 [![Docker Pulls](https://img.shields.io/docker/pulls/1995parham/gosimac.svg?style=flat-square&logo=docker)](https://hub.docker.com/r/1995parham/gosimac/)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/1995parham/gosimac/latest?style=flat-square&logo=docker)
@@ -8,8 +10,7 @@
 
 ## Introduction
 
-*gosimac* downloads Bing's daily wallpapers, Unsplash's random images, and etc. for you to have a beautiful wallpaper on your desktop whenever you want.
-Personally, I wrote this to have fun and help one of my friends who is not among us right now. :disappointed:
+*wally* downloads Bing's daily wallpapers, Unsplash's and Reddit's hot random images for you to have a beautiful wallpaper on your desktop whenever you want.
 
 ## Installation
 ### brew
@@ -20,7 +21,7 @@ brew install 1995parham/tap/gosimac
 ## Usage
 ```sh
 Usage:
-  GoSiMac [command]
+  wally [command]
 
 Available Commands:
   bing        fetches images from https://bing.com
@@ -28,19 +29,19 @@ Available Commands:
   unsplash    fetches images from https://unsplash.org
 
 Flags:
-  -h, --help          help for GoSiMac
+  -h, --help          help for wally
   -n, --number int    The number of photos to return (default 10)
-  -p, --path string   A path to store the photos (default "/home/parham/Pictures/GoSiMac")
-  -v, --version       version for GoSiMac
+  -p, --path string   A path to store the photos (default "$HOME/Pictures/wally")
+  -v, --version       version for wally
 ```
 
-As an example, the following command downloads 10 images from unsplash while using Tehran as a search query.
+As an example, the following command downloads 10 images from unsplash while using _deer_ as a search query.
 
 ```sh
-gosimac u -q Tehran -n 10
+wally u -q deer -n 10
 ```
 
-By default, *gosimac* stores images in `$HOME/Pictures/GoSiMac`.
+By default, *wally* stores images in `$HOME/Pictures/wally`.
 
 ## Contribution
 This module is highly customizable and new sources can easily add just by implementing source interface.
@@ -56,4 +57,4 @@ type Source interface {
 
 The `Init` method is called on initiation and returns number of available images to download.
 Then for each image `Fetch` is called and the result is stored at the user specific location.
-By implementing this interface you can create new sources for *gosimac*.
+By implementing this interface you can create new sources for *wally*.
