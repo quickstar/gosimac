@@ -1,13 +1,13 @@
 ---
-project_name: gosimac
+project_name: wally
 
 release:
   github:
-    owner: 1995parham
-    name: gosimac
+    owner: quickstar
+    name: wally
 
 builds:
-  - binary: gosimac
+  - binary: wally
     goos:
       - linux
       - darwin
@@ -29,8 +29,8 @@ archives:
       - changelog*
       - CHANGELOG*
 brews:
-  - name: gosimac
+  - name: wally
     tap:
-      owner: 1995parham
+      owner: quickstar
       name: homebrew-tap
-    description: "Fetch the wallpaper from Bings, Unsplash ..."
+    description: "Fetch the wallpaper from Bing, Reddit, Unsplash ..."

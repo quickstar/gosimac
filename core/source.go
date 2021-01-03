@@ -1,16 +1,3 @@
-/*
- *
- * In The Name of God
- *
- * +===============================================
- * | Author:        Parham Alvani <parham.alvani@gmail.com>
- * |
- * | Creation Date: 30-08-2018
- * |
- * | File Name:     source.go
- * +===============================================
- */
-
 package core
 
 import "io"

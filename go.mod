@@ -1,4 +1,4 @@
-module github.com/1995parham/gosimac
+module github.com/quickstar/wally
 
 require (
 	github.com/fatih/color v1.9.0
@@ -13,4 +13,4 @@ require (
 	golang.org/x/sys v0.0.0-20200523222454-059865788121 // indirect
 )
 
-go 1.14
+go 1.15

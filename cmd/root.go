@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/1995parham/gosimac/cmd/bing"
-	"github.com/1995parham/gosimac/cmd/common"
-	"github.com/1995parham/gosimac/cmd/reddit"
-	"github.com/1995parham/gosimac/cmd/unsplash"
+	"github.com/quickstar/wally/cmd/bing"
+	"github.com/quickstar/wally/cmd/common"
+	"github.com/quickstar/wally/cmd/reddit"
+	"github.com/quickstar/wally/cmd/unsplash"
 	"github.com/spf13/cobra"
 )
 
@@ -18,8 +18,8 @@ const ExitFailure = 1
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
 	command := &cobra.Command{
-		Use:     "GoSiMac",
-		Short:   "Fetch the wallpaper from Bings, Wikimedia ...",
+		Use:     "wally",
+		Short:   "Fetch the wallpaper from Bing, Reddit, Unsplash ...",
 		Version: "4.0.0",
 	}
 

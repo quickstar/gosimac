@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/1995parham/gosimac/cmd"
+	"github.com/quickstar/wally/cmd"
 )
 
 // nolint: gocheckglobals
@@ -14,7 +14,7 @@ var (
 )
 
 func main() {
-	fmt.Printf("gosimac %s, commit %s, built at %s\n", version, commit, date)
+	fmt.Printf("wally %s, commit %s, built at %s\n", version, commit, date)
 
 	cmd.Execute()
 }

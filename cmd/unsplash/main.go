@@ -1,8 +1,8 @@
 package unsplash
 
 import (
-	"github.com/1995parham/gosimac/cmd/common"
-	"github.com/1995parham/gosimac/unsplash"
+	"github.com/quickstar/wally/cmd/common"
+	"github.com/quickstar/wally/unsplash"
 	"github.com/spf13/cobra"
 )
 

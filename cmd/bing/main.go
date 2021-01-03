@@ -1,8 +1,8 @@
 package bing
 
 import (
-	"github.com/1995parham/gosimac/bing"
-	"github.com/1995parham/gosimac/cmd/common"
+	"github.com/quickstar/wally/bing"
+	"github.com/quickstar/wally/cmd/common"
 	"github.com/spf13/cobra"
 )
 

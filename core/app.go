@@ -1,16 +1,3 @@
-/*
- *
- * In The Name of God
- *
- * +===============================================
- * | Author:        Parham Alvani <parham.alvani@gmail.com>
- * |
- * | Creation Date: 30-08-2018
- * |
- * | File Name:     app.go
- * +===============================================
- */
-
 package core
 
 import (
@@ -24,7 +11,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// App is a GoSiMac application. It contains all gosimac functionality.
+// App is a wally application. It contains all wally functionality.
 // it fetchs background from given source and store them in the given path.
 type App struct {
 	source Source

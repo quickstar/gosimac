@@ -1,8 +1,8 @@
 package reddit
 
 import (
-	"github.com/1995parham/gosimac/cmd/common"
-	"github.com/1995parham/gosimac/reddit"
+	"github.com/quickstar/wally/cmd/common"
+	"github.com/quickstar/wally/reddit"
 	"github.com/spf13/cobra"
 )
 

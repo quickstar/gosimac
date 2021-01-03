@@ -5,9 +5,9 @@ import (
 	"os/user"
 	"path"
 
-	"github.com/1995parham/gosimac/core"
 	"github.com/fatih/color"
 	"github.com/labstack/gommon/log"
+	"github.com/quickstar/wally/core"
 	"github.com/spf13/cobra"
 )
 
