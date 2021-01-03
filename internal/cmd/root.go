@@ -5,24 +5,25 @@ import (
 	"os"
 	"path"
 
-	"github.com/1995parham/gosimac/internal/cmd/bing"
-	"github.com/1995parham/gosimac/internal/cmd/unsplash"
 	"github.com/adrg/xdg"
 	"github.com/pterm/pterm"
+	"github.com/quickstar/wally/internal/cmd/bing"
+	"github.com/quickstar/wally/internal/cmd/reddit"
+	"github.com/quickstar/wally/internal/cmd/unsplash"
 	"github.com/spf13/cobra"
 )
 
 // ExitFailure status code.
 const (
 	ExitFailure = 1
-	// DirectoryPermission used for creating GoSiMac Directory.
+	// DirectoryPermission used for creating wally Directory.
 	// nolint: gofumpt
 	DirectoryPermission os.FileMode = 0755
 )
 
 // DefaultPath is a default path for storing the wallpapers.
 func DefaultPath() string {
-	p := path.Join(xdg.UserDirs.Pictures, "GoSiMac")
+	p := path.Join(xdg.UserDirs.Pictures, "wally")
 	if _, err := os.Stat(p); err != nil {
 		if err := os.Mkdir(p, DirectoryPermission); err != nil {
 			log.Fatalf("os.Mkdir: %v", err)
@@ -37,8 +38,8 @@ func DefaultPath() string {
 func Execute() {
 	// nolint: exhaustruct
 	root := &cobra.Command{
-		Use:   "GoSiMac",
-		Short: "Fetch the wallpaper from Bings, Unsplash...",
+		Use:   "wally",
+		Short: "Fetch the wallpaper from Bings, Reddit, Unsplash...",
 	}
 
 	var path string
@@ -46,6 +47,7 @@ func Execute() {
 	root.PersistentFlags().StringVarP(&path, "path", "p", DefaultPath(), "A path to where photos are stored")
 
 	unsplash.Register(root, path)
+	reddit.Register(root, path)
 	bing.Register(root, path)
 
 	if err := root.Execute(); err != nil {

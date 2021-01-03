@@ -3,7 +3,8 @@
 *.dll
 *.so
 *.dylib
-gosimac
+wally
+wally.exe
 
 # Test binary, build with `go test -c`
 *.test

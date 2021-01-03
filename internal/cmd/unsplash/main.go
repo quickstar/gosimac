@@ -3,15 +3,15 @@ package unsplash
 import (
 	"fmt"
 
-	"github.com/1995parham/gosimac/internal/unsplash"
 	"github.com/pterm/pterm"
+	"github.com/quickstar/wally/internal/unsplash"
 	"github.com/spf13/cobra"
 )
 
 const (
 	flagQuery       = "query"
 	flagOrientation = "orientation"
-	flagCount       = "numer"
+	flagCount       = "number"
 	flagToken       = "token"
 	flagSize        = "size"
 
@@ -19,7 +19,7 @@ const (
 	defaultCount = 10
 
 	// nolint: gosec
-	gosimacToken = "4c483af1b27cf8d55fc29504bc48e3755e47eb7a3dd3a320e92b23fc4e5aa1b8"
+	unsplashApiToken = "4c483af1b27cf8d55fc29504bc48e3755e47eb7a3dd3a320e92b23fc4e5aa1b8"
 )
 
 // Register registers unsplash command.
@@ -80,6 +80,6 @@ func Register(root *cobra.Command, path string) {
 	)
 	cmd.Flags().StringP(flagSize, "s", "full", "Image size on unsplash: small, regular, full and raw")
 	cmd.Flags().IntP(flagCount, "n", defaultCount, "The number of photos to return")
-	cmd.Flags().StringP(flagToken, "t", gosimacToken, "The unplash api token")
+	cmd.Flags().StringP(flagToken, "t", unsplashApiToken, "The unplash api token")
 	root.AddCommand(cmd)
 }

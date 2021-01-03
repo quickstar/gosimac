@@ -1,6 +1,6 @@
 go 1.18
 
-module github.com/1995parham/gosimac
+module github.com/quickstar/wally
 
 require (
 	github.com/adrg/xdg v0.4.0

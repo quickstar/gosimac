@@ -1,15 +1,15 @@
 ---
-project_name: gosimac
+project_name: wally
 
 release:
   github:
-    owner: 1995parham
-    name: gosimac
+    owner: quickstar
+    name: wally
 
 checksum: {}
 
 builds:
-  - binary: gosimac
+  - binary: wally
     goos:
       - linux
       - darwin

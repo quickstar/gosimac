@@ -3,14 +3,14 @@ package bing
 import (
 	"fmt"
 
-	"github.com/1995parham/gosimac/internal/bing"
 	"github.com/pterm/pterm"
+	"github.com/quickstar/wally/internal/bing"
 	"github.com/spf13/cobra"
 )
 
 const (
 	flagIndex = "index"
-	flagCount = "numer"
+	flagCount = "number"
 
 	// DefaultCount is a default number of fetching images from sources.
 	defaultCount = 10
